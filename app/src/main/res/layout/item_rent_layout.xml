@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/def_margin"
+        android:layout_marginLeft="@dimen/def_margin"
+        />
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/def_margin"
+        android:text="肯德基"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@+id/item_title"
+        android:layout_toRightOf="@+id/item_image"
+        android:layout_margin="@dimen/def_margin"
+        android:text="月售1000单"/>
+    <View
+        android:id="@+id/line"
+        android:layout_below="@+id/item_image"
+        android:layout_marginTop="@dimen/def_margin"
+        style="@style/base_line_style"/>
+    <TextView
+        android:id="@+id/item_desc_1"
+        android:layout_below="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/def_margin"
+        android:text="首单立减10元 (在线支付专享)"/>
+    <TextView
+        android:layout_below="@+id/item_desc_1"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/def_margin"
+        android:layout_height="wrap_content"
+        android:text="满69减20 (在线支付专享)"/>
+
+
+
+
+
+</RelativeLayout>

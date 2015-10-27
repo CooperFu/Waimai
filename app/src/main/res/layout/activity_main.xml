@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.uniqueway.assistant.android.ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_centent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/table_bar_height"/>
+
+    <RadioGroup
+        android:id="@+id/main_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/table_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/double_divider_bg"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            style="@style/main_radio_radio_style"
+            android:text="@string/main"/>
+
+        <RadioButton
+            style="@style/main_radio_radio_style"
+            android:text="@string/tailor"/>
+
+        <RadioButton
+            style="@style/main_radio_radio_style"
+            android:text="@string/me"/>
+    </RadioGroup>
+
+</RelativeLayout>
