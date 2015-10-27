@@ -3,10 +3,10 @@ package io.github.naotou.gradlewaimai.fragment;
 import android.net.Uri;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.interfaces.DraweeController;
@@ -15,7 +15,7 @@ import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
 import io.github.naotou.gradlewaimai.R;
-import io.github.naotou.gradlewaimai.adapter.RecycleSimpleAdapter;
+import io.github.naotou.gradlewaimai.adapter.ListViewSimpleAdapter;
 import io.github.naotou.gradlewaimai.custom.CirclePageIndicator;
 import io.github.naotou.gradlewaimai.framework.BaseFrag;
 
@@ -29,7 +29,8 @@ public class MainFrag extends BaseFrag {
     private ViewPager mViewPager;
     private CirclePageIndicator mIndicator;
     private String[] mImage;
-    private RecyclerView mRecycler;
+    private ListView mListView;
+    private View header;
 
 
     @Override public int createViewById() {
@@ -38,10 +39,11 @@ public class MainFrag extends BaseFrag {
 
 
     @Override protected void initViews() {
-        setBackHomeIndicator(false);
-        mViewPager = (ViewPager) find(R.id.main_viewpager);
-        mIndicator = (CirclePageIndicator) find(R.id.main_indicator);
-        mRecycler = (RecyclerView) find(R.id.main_recycler);
+        mListView = (ListView) find(R.id.main_listview);
+        header = LayoutInflater.from(getActivity()).inflate(R.layout.listview_header, null);
+
+        mViewPager = (ViewPager) header.findViewById(R.id.main_viewpager);
+        mIndicator = (CirclePageIndicator) header.findViewById(R.id.main_indicator);
     }
 
     @Override protected void initEvents() {
@@ -51,10 +53,11 @@ public class MainFrag extends BaseFrag {
                 "http://ww3.sinaimg.cn/large/7a8aed7bjw1ex9nm11pbnj20hs0qo0u2.jpg",
                 "http://ww2.sinaimg.cn/large/7a8aed7bjw1exfffnlf2gj20hq0qoju9.jpg"};
 
+
+        mListView.addHeaderView(header, null, false);
         mViewPager.setAdapter(new PicAdapter());
         mIndicator.setViewPager(mViewPager);
-        mRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecycler.setAdapter(new RecycleSimpleAdapter());
+        mListView.setAdapter(new ListViewSimpleAdapter());
     }
 
     private class PicAdapter extends PagerAdapter {

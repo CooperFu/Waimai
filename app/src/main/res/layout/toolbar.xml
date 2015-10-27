@@ -5,4 +5,4 @@
     style="@style/base_toolbar_style"
     android:id="@+id/toolbar"
     android:layout_height="wrap_content"
-    app:navigationIcon="@mipmap/ic_back_black"/>
+    />

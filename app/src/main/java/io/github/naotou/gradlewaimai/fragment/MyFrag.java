@@ -18,6 +18,6 @@ public class MyFrag extends BaseFrag {
     @Override protected void initViews() {
         super.initViews();
         //设置返回箭头不显示
-        setBackHomeIndicator(false);
+        setBackHomeIndicator();
     }
 }

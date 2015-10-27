@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.lang.reflect.Field;
 
@@ -25,6 +26,8 @@ public abstract class BaseFrag extends Fragment {
     protected View mBackView;
 
     protected ImageView mBackIcon;
+
+    protected TextView mTitleView;
 
 
     @Nullable
@@ -47,20 +50,30 @@ public abstract class BaseFrag extends Fragment {
             mToolbar = (ViewGroup) find(R.id.toolbar);
             mBackView = find(android.R.id.home);
             mBackIcon = (ImageView) find(android.R.id.home);
+            mTitleView = (TextView) find(R.id.toolbar_title);
         }
     }
 
     /**
      * 设置返回键
      */
-    public void setBackHomeIndicator(boolean visible) {
-        if (mBackView != null)
-            if (visible==true) {
-                mBackView.setVisibility(View.VISIBLE);
+    public void setBackHomeIndicator() {
+        if (mBackView != null) {
+            mBackView.setVisibility(View.VISIBLE);
+        }
+    }
 
-            } else {
-                mBackView.setVisibility(View.GONE);
-            }
+    public void setTitle(CharSequence title) {
+        if (mTitleView != null) {
+            mTitleView.setText(title);
+        }
+    }
+
+    public CharSequence getTitle() {
+        if (mTitleView != null) {
+            return mTitleView.getText();
+        }
+        return null;
     }
 
 

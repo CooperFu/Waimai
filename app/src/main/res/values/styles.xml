@@ -42,6 +42,14 @@
 
     </style>
 
+    <style name="base_actionbar_title" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:id">@id/toolbar_title</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 
 
 
