@@ -80,6 +80,8 @@ public class MainActivity extends BaseActivity {
         });
     }
 
+
+
     /**
      * fragment 切换状态枚举
      */

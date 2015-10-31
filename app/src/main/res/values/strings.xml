@@ -78,4 +78,10 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="random">大降价啦啦啦啦啦</string>
     <string name="customize_title">段天外卖</string>
+
+    <string name="common_loading_message">Loading...</string>
+    <string name="common_empty_msg">Oops, failed to resolve data\nPlease hit the screen and try again~</string>
+    <string name="common_error_msg">Oops, something wrong!\nPlease hit the screen and try again~</string>
+    <string name="common_no_network_msg">No network connected!\nPlease hit the screen and try again after connecting~</string>
+
 </resources>

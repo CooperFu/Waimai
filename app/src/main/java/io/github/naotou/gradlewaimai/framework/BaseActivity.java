@@ -12,7 +12,7 @@ import io.github.naotou.gradlewaimai.R;
 /**
  * Created by gaopengfei on 15/6/24.
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity{
 
 
     protected Toolbar mToolbar;
@@ -57,18 +57,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-
-    protected void onPause() {
-        super.onPause();
-    }
-
-    protected void onResume() {
-        super.onResume();
-    }
-
     public void back() {
         finish();
     }
+
 
 }

@@ -50,7 +50,15 @@ public class App extends Application {
         return mContext;
     }
 
-    public static void setContext(Context mContext) {
-        App.mContext = mContext;
+
+    @Override
+    public void onLowMemory() {
+        android.os.Process.killProcess(android.os.Process.myPid());
+        super.onLowMemory();
+    }
+
+    public void exitApp() {
+        System.gc();
+        android.os.Process.killProcess(android.os.Process.myPid());
     }
 }

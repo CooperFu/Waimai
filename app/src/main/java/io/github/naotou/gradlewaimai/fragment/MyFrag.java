@@ -17,7 +17,49 @@ public class MyFrag extends BaseFrag {
 
     @Override protected void initViews() {
         super.initViews();
-        //设置返回箭头不显示
-        setBackHomeIndicator();
+//        //设置返回箭头不显示
+//        Observer<String> observer = new Observer<String>() {
+//            @Override public void onCompleted() {
+//                ToastUtils.showShort("completed");
+//            }
+//
+//            @Override public void onError(Throwable e) {
+//
+//            }
+//
+//            @Override public void onNext(String s) {
+//                ToastUtils.showShort(s);
+//            }
+//
+//        };
+//        Subscriber<Integer> subscriber = new Subscriber<Integer>() {
+//            @Override public void onCompleted() {
+//
+//            }
+//
+//            @Override public void onError(Throwable e) {
+//
+//            }
+//
+//            @Override public void onNext(Integer integer) {
+//
+//            }
+//
+//            @Override public void onStart() {
+//                super.onStart();
+//            }
+//        };
+//
+//        Observable<String> stringObservable = Observable.create(new Observable.OnSubscribe<String>() {
+//
+//            @Override public void call(Subscriber<? super String> subscriber) {
+//                subscriber.onNext("hello");
+//                subscriber.onNext("rx");
+//                subscriber.onNext("java");
+//                subscriber.onCompleted();
+//            }
+//        });
+
+
     }
 }

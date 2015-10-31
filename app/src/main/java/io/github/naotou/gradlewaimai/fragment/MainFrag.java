@@ -54,7 +54,7 @@ public class MainFrag extends BaseFrag {
                 "http://ww2.sinaimg.cn/large/7a8aed7bjw1exfffnlf2gj20hq0qoju9.jpg"};
 
 
-        mListView.addHeaderView(header, null, false);
+        mListView.addHeaderView(header, null, true);
         mViewPager.setAdapter(new PicAdapter());
         mIndicator.setViewPager(mViewPager);
         mListView.setAdapter(new ListViewSimpleAdapter());
